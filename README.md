@@ -4,11 +4,12 @@
 
 Steps to making this project skeleton into your own project.
 
-1. Clone this repo: `git clone https://github.com/ORESoftware/typescript-library-skeleton.git YOUR-PROJECT-NAME`
-2. Update package.json so that `name` property matches YOUR-PROJECT-NAME.
+1. Clone this repo: <br>
+    `git clone https://github.com/ORESoftware/typescript-library-skeleton.git YOUR-PROJECT-NAME`
+2. Update package.json so that `name` property matches `YOUR-PROJECT-NAME`.
 3. Update other package.json fields so that they are accurate.
 
-To check to see if YOUR-PROJECT-NAME is available on NPM, uses this command at the command line:
+To check to see if `YOUR-PROJECT-NAME` is available on NPM, uses this command at the command line:
 
 `$ npm view YOUR-PROJECT-NAME`  # will give you a 404 if the name is available.
 
