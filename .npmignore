@@ -1,0 +1,10 @@
+node_modules
+scripts
+test
+.idea
+.vscode
+*.log
+*.md
+*.json
+*.DS_Store
+
