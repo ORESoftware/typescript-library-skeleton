@@ -3,8 +3,8 @@
   "version": "0.0.101",
   "description": "Semver-oriented TypeScript library skeleton.",
   "main": "lib/index.js",
-  "types": "index.d.ts",
-  "typings": "index.d.ts",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "test": "suman test"
   },
@@ -21,7 +21,7 @@
     "scaffold"
   ],
   "author": "Olegzandr VD",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
     "url": "https://github.com/ORESoftware/typescript-library-skeleton/issues"
   },
