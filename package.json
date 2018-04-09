@@ -2,7 +2,7 @@
   "name": "typescript-library-skeleton",
   "version": "0.0.101",
   "description": "Semver-oriented TypeScript library skeleton.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "types": "index.d.ts",
   "typings": "index.d.ts",
   "scripts": {
