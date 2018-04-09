@@ -2,9 +2,20 @@
 
 # Your Project Readme Goes Here
 
+Steps to making this project skeleton into your own project.
+
+1. Clone this repo: `git clone https://github.com/ORESoftware/typescript-library-skeleton.git YOUR-PROJECT-NAME`
+2. Update package.json so that `name` property matches YOUR-PROJECT-NAME.
+3. Update other package.json fields so that they are accurate.
+
+To check to see if YOUR-PROJECT-NAME is available on NPM, uses this command at the command line:
+
+`$ npm view YOUR-PROJECT-NAME`  # will give you a 404 if the name is available.
+
 
 ### This project skeleton uses:
 
+* the correct semver initial value (npm init defaults to 1.0.0 which is just wrong).
 * typescript 2.x
 * nodejs version 9
 * travis (for automated testing of your library)
