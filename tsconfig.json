@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "allowJs": false,
+    "pretty": true,
     "skipLibCheck": true,
     "declaration": true,
     "baseUrl": ".",

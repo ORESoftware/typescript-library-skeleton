@@ -3,6 +3,9 @@
   "version": "0.0.101",
   "description": "Semver-oriented TypeScript library skeleton.",
   "main": "lib/index.js",
+  "bin": {
+    "typescript-library-skeleton": "lib/cli.js"
+  },
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
   "scripts": {
@@ -18,13 +21,13 @@
     "skeleton",
     "scaffold"
   ],
-  "author": "Olegzandr VD",
+  "author": "Yo.Mama",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
     "url": "https://github.com/ORESoftware/typescript-library-skeleton/issues"
   },
   "homepage": "https://github.com/ORESoftware/typescript-library-skeleton#readme",
-  "dependencies":{},
+  "dependencies": {},
   "devDependencies": {
     "@types/core-js": "^0.9.46",
     "@types/node": "^9.6.2"
