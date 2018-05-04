@@ -2,7 +2,13 @@
 
 # Your Project Readme Goes Here
 
-Steps to making this project skeleton into your own project.
+This project is used by:
+https://github.com/oresoftware/ts-project
+You can use ts-project to do things more automatically.
+
+To do things more manually, continue on.
+
+Steps to making this project skeleton your own project base.
 
 1. Clone this repo: <br>
     `git clone https://github.com/ORESoftware/typescript-library-skeleton.git YOUR-PROJECT-NAME`
@@ -21,7 +27,7 @@ To check to see if `YOUR-PROJECT-NAME` is available on NPM, uses this command at
 * nodejs version 9
 * travis (for automated testing of your library)
 * MIT license
-* good simple default settings for .gitignore / .npmignore
+* good simple default settings for .gitignore / .npmignore / .editorconfig / .gitattributes
 
 
 
