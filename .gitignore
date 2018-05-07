@@ -1,5 +1,10 @@
+
+### folders
 .idea
 .vscode
 node_modules
 logs
+
+### matching
 *.log
+*.tgz
