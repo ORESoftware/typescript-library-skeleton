@@ -2,12 +2,12 @@
   "name": "typescript-library-skeleton",
   "version": "0.0.101",
   "description": "Semver-oriented TypeScript library skeleton.",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "bin": {
-    "typescript-library-skeleton": "lib/cli.js"
+    "xxx-TODO-typescript-library-skeleton": "dist/cli.js"
   },
-  "types": "lib/index.d.ts",
-  "typings": "lib/index.d.ts",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "test": "suman test"
   },
@@ -21,7 +21,7 @@
     "skeleton",
     "scaffold"
   ],
-  "author": "Yo.Mama",
+  "author": "TODO Yo.Mama",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
     "url": "https://github.com/ORESoftware/typescript-library-skeleton/issues"

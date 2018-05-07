@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir":"dist",
     "allowJs": false,
     "pretty": true,
     "skipLibCheck": true,
@@ -22,6 +23,6 @@
     "node_modules"
   ],
   "include": [
-    "lib"
+    "src"
   ]
 }

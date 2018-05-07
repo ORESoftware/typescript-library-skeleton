@@ -28,29 +28,20 @@ To check to see if `YOUR-PROJECT-NAME` is available on NPM, uses this command at
 * travis (for automated testing of your library)
 * MIT license
 * good simple default settings for .gitignore / .npmignore / .editorconfig / .gitattributes
+* Transpiling from src to dist folders (by default, you can change it manually)
 
 
+To transpile files in place, instead of tranpiling from `'src'` to `'dist'`:
 
-To compile your *.ts files to a dist directory (keeps your source and target files separate),
 <br>
-simply add this to tsconfig.json:
-
+update tsconfig.json:
 
 ```json
 "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist"    // remove this line
 }
 ```
 
-and
-
-```json
- "include": [
-    "src"
-  ]
-```
-
-For small libraries with a couple of files, I find that using a dist folder (target directory) is more trouble
-than it's worth. For projects with just one .ts/.js file, you can just get rid of the lib folder, and put your index.ts
+For small projects with just one .ts/.js file, you can just get rid of the src/lib folder, and put your index.ts
 file in the root of the project. In that case, make sure to change the `main` property in package.json from 'lib/index.js' to
-'index.js'. Same with the `typings/types` properties.
+'index.js'. Same with the `typings/types` properties. 

@@ -3,7 +3,7 @@
 set -e;
 
 # "cm" is the commit message; default message is "set"
-cm="${1:-'empty commit message'}"
+cm="${1:-'set'}"
 
 git add .
 git add -A
