@@ -5,6 +5,9 @@ scripts
 test
 .idea
 .vscode
+coverage
+.nyc_output
+build/Release
 
 ### files
 .editorconfig
@@ -12,6 +15,7 @@ test
 .gitignore
 .npmignore
 .travis.yml
+suman.conf.js
 
 ### matching
 *.log

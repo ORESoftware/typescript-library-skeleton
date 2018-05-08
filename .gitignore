@@ -4,7 +4,11 @@
 .vscode
 node_modules
 logs
+dist/*
 
 ### matching
 *.log
 *.tgz
+
+### inverse
+!dist/.gitkeep
