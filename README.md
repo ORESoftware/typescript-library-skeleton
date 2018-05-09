@@ -34,11 +34,11 @@ To check to see if `YOUR-PROJECT-NAME` is available on NPM, uses this command at
 To transpile files in place, instead of tranpiling from `'src'` to `'dist'`:
 
 <br>
-update tsconfig.json:
+update tsconfig.json  (remove the `outDir` line):
 
 ```json
 "compilerOptions": {
-    "outDir": "dist"    // remove this line
+    "outDir": "dist"    
 }
 ```
 
