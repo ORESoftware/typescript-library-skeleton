@@ -27,7 +27,9 @@
     "url": "https://github.com/ORESoftware/typescript-library-skeleton/issues"
   },
   "homepage": "https://github.com/ORESoftware/typescript-library-skeleton#readme",
-  "dependencies": {},
+  "dependencies": {
+    "gmx": "latest"
+  },
   "devDependencies": {
     "@types/core-js": "^0.9.46",
     "@types/node": "^9.6.2"
