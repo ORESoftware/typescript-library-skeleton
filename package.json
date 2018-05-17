@@ -9,7 +9,8 @@
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "suman test"
+    "test": "suman test",
+    "postinstall": "./assets/postinstall.sh"
   },
   "repository": {
     "type": "git",
