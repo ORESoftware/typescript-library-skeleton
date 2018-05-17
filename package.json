@@ -4,7 +4,7 @@
   "description": "Semver-oriented TypeScript library skeleton.",
   "main": "dist/index.js",
   "bin": {
-    "xxx-TODO-typescript-library-skeleton": "dist/cli.js"
+    "TODO-typescript-library-skeleton": "dist/cli.js"
   },
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
