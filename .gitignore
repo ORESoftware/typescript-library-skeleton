@@ -10,6 +10,9 @@ dist/*
 *.log
 *.tgz
 
+### files
+package-lock.json
+
 ### inverse
 !dist/.gitkeep
 !dist/README.md
