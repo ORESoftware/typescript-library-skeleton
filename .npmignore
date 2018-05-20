@@ -9,18 +9,19 @@ coverage
 .nyc_output
 build/Release
 src
+docs
 
 ### files
 .editorconfig
 .gitattributes
 .gitignore
 .npmignore
+.dockerignore
 .travis.yml
 suman.conf.js
+tsconfig*.json
 
 ### matching
 *.log
 *.md
-*.json
-*.DS_Store
 

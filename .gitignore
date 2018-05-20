@@ -2,6 +2,8 @@
 ### folders
 .idea
 .vscode
+coverage
+.nyc_output
 node_modules
 logs
 dist/*
