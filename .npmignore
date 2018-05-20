@@ -24,4 +24,5 @@ tsconfig*.json
 ### matching
 *.log
 *.md
+*.tgz
 
