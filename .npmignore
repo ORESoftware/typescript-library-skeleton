@@ -10,6 +10,9 @@ coverage
 build/Release
 src
 docs
+.tscmultiwatch
+.docker.r2g
+.circleci
 
 ### files
 .editorconfig
