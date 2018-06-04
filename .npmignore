@@ -23,6 +23,7 @@ docs
 .travis.yml
 suman.conf.js
 tsconfig*.json
+Dockerfile*
 
 ### matching
 *.log
