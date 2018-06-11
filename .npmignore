@@ -13,6 +13,7 @@ docs
 .tscmultiwatch
 .docker.r2g
 .circleci
+.suman
 
 ### files
 .editorconfig
@@ -22,11 +23,11 @@ docs
 .dockerignore
 .travis.yml
 suman.conf.js
-tsconfig*.json
 Dockerfile*
 
 ### matching
 *.log
 *.md
 *.tgz
+tsconfig*.json
 
