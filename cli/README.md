@@ -2,7 +2,11 @@
 ## Some important notes on using bash for entry points to command line tools
 
 #### here is the main reason we use bash as an intermediary
-##### => https://stackoverflow.com/questions/50616253/how-to-resolve-chicken-egg-situation-with-tsc-and-npm-install
+
+>
+> https://stackoverflow.com/questions/50616253/how-to-resolve-chicken-egg-situation-with-tsc-and-npm-install
+>
+
 
 ##### we use this bash file instead of a dist/.js file, because of this problem:
 

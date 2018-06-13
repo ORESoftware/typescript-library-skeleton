@@ -12,6 +12,6 @@ my_args=( "$@" );
 # tsc
 # npm test
 
-npm version patch
+npm version prerelease
 git push --follow-tags
 npm publish
