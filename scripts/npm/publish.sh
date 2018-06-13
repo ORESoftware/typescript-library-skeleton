@@ -3,6 +3,7 @@
 
 set -e;
 
+rm -rf node_modules
 npm install --no-optional
 tsc
 npm test
