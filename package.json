@@ -1,6 +1,6 @@
 {
   "name": "typescript-library-skeleton",
-  "version": "0.0.105",
+  "version": "1.0.0",
   "description": "Semver-oriented TypeScript library skeleton.",
   "main": "dist/index.js",
   "bin": {
