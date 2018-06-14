@@ -1,6 +1,8 @@
 {
   "compileOnSave": false,
+  "allowJs": false,
   "compilerOptions": {
+    "declaration": false,
     "compileOnSave": false,
     "allowJs": false,
     "pretty": true,

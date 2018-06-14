@@ -1,4 +1,5 @@
 
+## TSLS - TypeScript Library Skeleton
 
 # Your Project Readme Goes Here
 
@@ -38,10 +39,10 @@ update tsconfig.json  (remove the `outDir` line):
 
 ```json
 "compilerOptions": {
-    "outDir": "dist"    
+    "outDir": "dist"
 }
 ```
 
 For small projects with just one .ts/.js file, you can just get rid of the src/lib folder, and put your index.ts
 file in the root of the project. In that case, make sure to change the `main` property in package.json from 'lib/index.js' to
-'index.js'. Same with the `typings/types` properties. 
+'index.js'. Same with the `typings/types` properties.

@@ -23,10 +23,12 @@ docs
 .dockerignore
 .travis.yml
 suman.conf.js
-Dockerfile*
+npm-link-up.json
+.npm-link-up.json
 
 ### matching
 *.log
+Dockerfile*
 *.md
 *.tgz
 tsconfig*.json
