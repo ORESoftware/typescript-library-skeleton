@@ -5,6 +5,11 @@ set -e;
 my_args=( "$@" );
 first_arg="$1";
 
+if [ "$first_arg" != "patch" -a "$first_arg" != "major" -a "$first_arg" != "minor" -a "$first_arg" != "prerelease" ]; then
+  echo "First argument needs to match a valid npm version argument (patch, minor, major, etc).";
+  exit 1;
+fi
+
 ts_bold="$(tput bold)"
 ts_normal="$(tput sgr0)"
 
@@ -69,7 +74,7 @@ fi
 # tsc
 # npm test
 
-zmx npm version major
+zmx npm version "$first_arg"
 zmx git push --follow-tags
 
 if ! tsproject_match_arg "--no-publish" "${my_args[@]}"; then
