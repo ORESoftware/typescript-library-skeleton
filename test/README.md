@@ -11,5 +11,5 @@ To compile the first.ts test file, simple do:
 cd test && tsc -p tsconfig.test.json
 ```
 
-Or instead of compiling, you can trying using ts-node instead: <br>
+Or instead of compiling, you can try using ts-node instead: <br>
 https://github.com/TypeStrong/ts-node
