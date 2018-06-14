@@ -2,9 +2,12 @@
 
 set -e;
 
-first_arg="$1"; shift; my_args=( "$@" );
+my_args=( "$@" );
+first_arg="$1";
+
 ts_bold="$(tput bold)"
 ts_normal="$(tput sgr0)"
+
 
 tsproject_match_arg(){
     # checks to see if the first arg, is among the remaining args
@@ -47,7 +50,6 @@ zmx(){
     2> >( while read line; do echo -e "${zmx_magenta} [${v1} ${v2}] ${zmx_no_color} $line"; done ) \
     1> >( while read line; do echo -e "${zmx_gray} [${v1} ${v2}] ${zmx_no_color} $line"; done )
 }
-
 
 if [ "$first_arg" == "major" ] || [ "$first_arg" == "minor" ]; then
     if ! tsproject_match_arg "--decree" "${my_args[@]}"; then
