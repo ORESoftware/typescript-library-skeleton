@@ -24,6 +24,6 @@ fi
 # tsc
 # npm test
 
-npm version minor
-git push --follow-tags
-npm publish
+zmx npm version minor
+zmx git push --follow-tags
+zmx npm publish

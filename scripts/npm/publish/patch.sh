@@ -20,6 +20,6 @@ fi
 # tsc
 # npm test
 
-npm version patch        # bumps version, creates git commit and new git tag
-git push --follow-tags   # pushes latest commit and tag
-npm publish              # sends tarball to npm
+zmx npm version patch        # bumps version, creates git commit and new git tag
+zmx git push --follow-tags   # pushes latest commit and tag
+zmx npm publish              # sends tarball to npm
