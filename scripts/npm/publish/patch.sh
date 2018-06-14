@@ -22,4 +22,7 @@ fi
 
 zmx npm version patch        # bumps version, creates git commit and new git tag
 zmx git push --follow-tags   # pushes latest commit and tag
-zmx npm publish              # sends tarball to npm
+
+if ! tsproject_match_arg "--no-publish" "${my_args[@]}"; then
+    zmx npm publish  # sends tarball to npm
+fi

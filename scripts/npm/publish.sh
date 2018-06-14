@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+set -e;
 
-export ts_bold="$(tput bold)"
-export ts_normal="$(tput sgr0)"
+first_arg="$1"; shift; my_args=( "$@" );
+ts_bold="$(tput bold)"
+ts_normal="$(tput sgr0)"
 
 tsproject_match_arg(){
     # checks to see if the first arg, is among the remaining args
@@ -28,16 +30,15 @@ tsproject_run_checks(){
     fi
   fi
 
-
 }
 
-export zmx_gray='\033[1;30m'
-export zmx_magenta='\033[1;35m'
-export zmx_cyan='\033[1;36m'
-export zmx_orange='\033[1;33m'
-export zmx_yellow='\033[1;33m'
-export zmx_green='\033[1;32m'
-export zmx_no_color='\033[0m'
+zmx_gray='\033[1;30m'
+zmx_magenta='\033[1;35m'
+zmx_cyan='\033[1;36m'
+zmx_orange='\033[1;33m'
+zmx_yellow='\033[1;33m'
+zmx_green='\033[1;32m'
+zmx_no_color='\033[0m'
 
 echo -e " ${zmx_gray}[tsls]${zmx_no_color} running NPM publish routine."
 
@@ -48,6 +49,27 @@ zmx(){
 }
 
 
-export -f zmx;
-export -f tsproject_run_checks;
-export -f tsproject_match_arg;
+if [ "$first_arg" == "major" ] || [ "$first_arg" == "minor" ]; then
+    if ! tsproject_match_arg "--decree" "${my_args[@]}"; then
+        echo "You must use the --decree argument to ensure this command is what you really want to do.";
+        exit 1;
+    fi
+fi
+
+if ! tsproject_run_checks "${my_args[@]}"; then
+   echo "A validation routine failed. Please check your system.";
+   exit 1;
+fi
+
+# consider running tests before you publish, something like this:
+# rm -rf node_modules
+# npm install --production --loglevel=warn
+# tsc
+# npm test
+
+zmx npm version major
+zmx git push --follow-tags
+
+if ! tsproject_match_arg "--no-publish" "${my_args[@]}"; then
+    zmx npm publish
+fi

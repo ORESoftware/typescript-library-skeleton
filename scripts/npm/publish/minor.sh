@@ -26,4 +26,7 @@ fi
 
 zmx npm version minor
 zmx git push --follow-tags
-zmx npm publish
+
+if ! tsproject_match_arg "--no-publish" "${my_args[@]}"; then
+    zmx npm publish
+fi

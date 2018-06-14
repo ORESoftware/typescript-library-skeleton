@@ -19,6 +19,9 @@ fi
 # tsc
 # npm test
 
-npm version prerelease
-git push --follow-tags
-npm publish
+zmx npm version prerelease
+zmx xgit push --follow-tags
+
+if ! tsproject_match_arg "--no-publish" "${my_args[@]}"; then
+    zmx npm publish
+fi

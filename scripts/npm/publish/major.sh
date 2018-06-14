@@ -23,9 +23,9 @@ fi
 # tsc
 # npm test
 
-npm version patch
-git push --follow-tags
+zmx npm version major
+zmx git push --follow-tags
 
 if ! tsproject_match_arg "--no-publish" "${my_args[@]}"; then
-    npm publish
+    zmx npm publish
 fi
