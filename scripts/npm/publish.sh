@@ -5,9 +5,9 @@ set -e;
 my_args=( "$@" );
 first_arg="$1";
 
-if [ "$first_arg" != "patch" -a "$first_arg" != "major" -a "$first_arg" != "minor" -a "$first_arg" != "prerelease" ]; then
-  echo "First argument needs to match a valid npm version argument (patch, minor, major, etc).";
-  exit 1;
+if ! [[ ${first_arg} =~ ^(patch|major|minor|prerelease)$ ]]; then
+    echo "First argument needs to match a valid npm version argument (patch, minor, major, etc)." >&2;
+    exit 1;
 fi
 
 ts_bold="$(tput bold)"
@@ -68,7 +68,7 @@ if ! tsproject_run_checks "${my_args[@]}"; then
    exit 1;
 fi
 
-# consider running tests before you publish, something like this:
+#### consider running tests before you publish, something like this:
 # rm -rf node_modules
 # npm install --production --loglevel=warn
 # tsc

@@ -14,5 +14,14 @@ which is the right way to about it.
 To publish a new patched version, run:
 
 ```bash
-./scripts/npm/publish/patch.sh
+./scripts/npm/publish.sh patch
 ```
+
+To publish a new minor version, run:
+
+```bash
+./scripts/npm/publish.sh minor
+```
+
+To publish minor/major versions, you need to pass the --decree option at the command line. <br>
+This will help you prevent bad mistakes, like bumping a minor/major version by accident.
