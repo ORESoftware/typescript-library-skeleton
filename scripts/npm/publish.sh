@@ -42,10 +42,6 @@ tsproject_run_checks(){
 
 zmx_gray='\033[1;30m'
 zmx_magenta='\033[1;35m'
-zmx_cyan='\033[1;36m'
-zmx_orange='\033[1;33m'
-zmx_yellow='\033[1;33m'
-zmx_green='\033[1;32m'
 zmx_no_color='\033[0m'
 
 echo -e " ${zmx_gray}[tsls]${zmx_no_color} running NPM publish routine."
@@ -74,9 +70,20 @@ fi
 # tsc
 # npm test
 
-zmx npm version "$first_arg"
-zmx git push --follow-tags
+zmx npm version "$first_arg" || {
+   echo -e "${zmx_magenta} => npm version command failed.${zmx_no_color}";
+   exit 1;
+}
 
-if ! tsproject_match_arg "--no-publish" "${my_args[@]}"; then
-    zmx npm publish
+zmx git push --follow-tags || {
+    echo -e "${zmx_magenta} => git push command failed.${zmx_no_color}";
+    exit 1;
+}
+
+if tsproject_match_arg "--no-publish" "${my_args[@]}"; then
+    echo -e "The --no-publish flag was passed so nothing was published to NPM.";
+else
+    zmx npm publish && {
+      echo "A new version of your package.json was published successfully.";
+    }
 fi
