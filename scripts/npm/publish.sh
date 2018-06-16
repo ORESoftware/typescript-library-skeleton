@@ -12,6 +12,13 @@ fi
 
 ts_bold="$(tput bold)"
 ts_normal="$(tput sgr0)"
+zmx_gray='\033[1;30m'
+zmx_magenta='\033[1;35m'
+zmx_cyan='\033[1;36m'
+zmx_orange='\033[1;33m'
+zmx_yellow='\033[1;33m'
+zmx_green='\033[1;32m'
+zmx_no_color='\033[0m'
 
 
 tsproject_match_arg(){
@@ -33,16 +40,14 @@ tsproject_run_checks(){
 
   if ! tsproject_match_arg "--any-branch" "${my_args[@]}"; then
     if [ "$branch" != "master" ]; then
-        echo "Current branch is not master => instead we have: '$branch'";
+        echo -e "${zmx_yellow} => Current branch is not master => instead we have: '$branch'.${zmx_no_color}";
         return 1;
     fi
   fi
 
 }
 
-zmx_gray='\033[1;30m'
-zmx_magenta='\033[1;35m'
-zmx_no_color='\033[0m'
+
 
 echo -e " ${zmx_gray}[tsls]${zmx_no_color} running NPM publish routine."
 
@@ -81,9 +86,9 @@ zmx git push --follow-tags || {
 }
 
 if tsproject_match_arg "--no-publish" "${my_args[@]}"; then
-    echo -e "The --no-publish flag was passed so nothing was published to NPM.";
+    echo -e "${zmx_cyan} => The --no-publish flag was passed so nothing was published to NPM.${zmx_no_color}";
 else
     zmx npm publish && {
-      echo "A new version of your package.json was published successfully.";
+      echo -e "${zmx_green} => A new version of your package.json was published successfully.${zmx_no_color}";
     }
 fi
