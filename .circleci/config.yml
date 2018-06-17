@@ -11,18 +11,19 @@
         "checkout",
         {
           "restore_cache": {
-            "keys": [
-              "v1-dependencies-{{ checksum \"package.json\" }}",
-              "v1-dependencies-"
-            ]
+            "key":   "v1-dependencies-{{ checksum \"package.json\" }}"
           }
         },
         {
-          "run": [
-            "sudo npm install -g --loglevel=warn @oresoftware/r2g",
-            "npm install --loglevel=warn"
-          ]
+          "run":
+            "sudo npm install -g --loglevel=warn @oresoftware/r2g"
+
         },
+       {
+                  "run":
+                    "npm install --loglevel=warn"
+                  
+         },
         {
           "save_cache": {
             "paths": [
@@ -32,10 +33,8 @@
           }
         },
         {
-          "run": [
-            "echo 'here is the test'",
-            "r2g run"
-          ]
+          "run": "r2g run"
+
         }
       ]
     }
