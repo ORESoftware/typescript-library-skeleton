@@ -15,6 +15,9 @@
           }
         },
         {
+          "run":"sudo chown -R $(whoami) $HOME"
+        }
+        {
           "run":
             "sudo npm install -g --loglevel=warn @oresoftware/r2g"
 
