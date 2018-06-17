@@ -1,6 +1,9 @@
 
 ## TSLS - TypeScript Library Skeleton
 
+https://travis-ci.org/ORESoftware/typescript-library-skeleton.svg?branch=master
+
+
 # Your Project Readme Goes Here
 
 This project is used by:
