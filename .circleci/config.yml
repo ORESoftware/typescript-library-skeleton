@@ -22,7 +22,7 @@
        {
                   "run":
                     "npm install --loglevel=warn"
-                  
+
          },
         {
           "save_cache": {
@@ -33,7 +33,7 @@
           }
         },
         {
-          "run": "r2g run"
+          "run": "sudo r2g run"
 
         }
       ]
