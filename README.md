@@ -24,12 +24,12 @@ To check to see if `YOUR-PROJECT-NAME` is available on NPM, uses this command at
 ### This project skeleton uses:
 
 * the correct semver initial value (npm init defaults to 1.0.0 which is just wrong).
-* typescript 2.x
-* nodejs version 9
-* travis (for automated testing of your library)
+* typescript 2.9.x
+* nodejs version 10
+* travis/circleci (for automated testing of your library)
 * MIT license
 * good simple default settings for .gitignore / .npmignore / .editorconfig / .gitattributes
-* Transpiling from src to dist folders (by default, you can change it manually)
+* Transpiling from src to dist folders (by default; you can change it manually)
 
 
 To transpile files in place, instead of tranpiling from `'src'` to `'dist'`:

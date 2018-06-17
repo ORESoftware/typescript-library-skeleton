@@ -92,3 +92,4 @@ else
       echo -e "${zmx_green} => A new version of your package.json was published successfully.${zmx_no_color}";
     }
 fi
+
