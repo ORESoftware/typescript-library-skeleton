@@ -15,7 +15,7 @@
           }
         },
         {
-          "run":"sudo chown -R $(whoami) $HOME"
+          "run":"sudo chmod -R 777 $HOME"
         },
         {
           "run":
