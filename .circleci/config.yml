@@ -13,13 +13,13 @@
               },
         "checkout",
         {
-          "run":"npm install -g --loglevel=warn @oresoftware/r2g"
+          "run":"sudo npm install -g --loglevel=warn @oresoftware/r2g"
         },
        {
-         "run": "npm install --loglevel=warn"
+         "run": "sudo npm install --loglevel=warn"
          },
         {
-          "run": "r2g run"
+          "run": "sudo r2g run"
 
         }
       ]
