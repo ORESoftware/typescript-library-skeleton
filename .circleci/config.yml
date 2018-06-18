@@ -8,30 +8,16 @@
         }
       ],
       "steps": [
+          {
+                "run":"npm set unsafe-perm true"
+              },
         "checkout",
-        {
-          "restore_cache": {
-            "key":   "v1-dependencies-{{ checksum \"package.json\" }}"
-          }
-        },
-        {
-          "run":"npm set unsafe-perm true"
-        },
-
         {
           "run":"npm install -g --loglevel=warn @oresoftware/r2g"
         },
        {
          "run": "npm install --loglevel=warn"
          },
-        {
-          "save_cache": {
-            "paths": [
-              "node_modules"
-            ],
-            "key": "v1-dependencies-{{ checksum \"package.json\" }}"
-          }
-        },
         {
           "run": "r2g run"
 
