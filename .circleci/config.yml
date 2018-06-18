@@ -18,21 +18,11 @@
           "run":"npm set unsafe-perm true"
         },
 
-            {
-                  "run":"sudo mkdir -p $HOME/.r2g/temp/project"
-                },
         {
-          "run":"sudo chmod -R 777 $HOME"
-        },
-        {
-          "run":
-            "sudo npm install -g --loglevel=warn @oresoftware/r2g"
-
+          "run":"npm install -g --loglevel=warn @oresoftware/r2g"
         },
        {
-                  "run":
-                    "npm install --loglevel=warn"
-
+         "run": "npm install --loglevel=warn"
          },
         {
           "save_cache": {
@@ -43,7 +33,7 @@
           }
         },
         {
-          "run": "sudo r2g run"
+          "run": "r2g run"
 
         }
       ]
