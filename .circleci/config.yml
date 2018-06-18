@@ -14,6 +14,10 @@
             "key":   "v1-dependencies-{{ checksum \"package.json\" }}"
           }
         },
+        {
+          "run":"npm set unsafe-perm true"
+        },
+
             {
                   "run":"sudo mkdir -p $HOME/.r2g/temp/project"
                 },
