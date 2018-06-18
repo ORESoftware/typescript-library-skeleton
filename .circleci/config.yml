@@ -11,9 +11,7 @@
         {
           "run": "npm set unsafe-perm true"
         },
-        {
-          "run": "checkout"
-        },
+         "checkout"
         {
           "run": "npm install -g --loglevel=warn @oresoftware/r2g"
         }
