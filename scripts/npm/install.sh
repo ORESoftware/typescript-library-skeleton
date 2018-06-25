@@ -18,4 +18,4 @@ if ! command -v nlu &> /dev/null; then
 fi
 
 echo "Now running npm-link-up...";
-nlu run;
+nlu run --shell-version;
