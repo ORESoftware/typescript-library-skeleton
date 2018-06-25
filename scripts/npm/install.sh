@@ -5,7 +5,7 @@ cmd="npm install $@";
 echo "$cmd" | bash;
 
 if [ "$?" != "0" ]; then
-  echo "Could not run npm install command: $cmd";
+  echo "Could not run the following npm install command: $cmd";
   exit 1;
 fi
 
@@ -18,4 +18,4 @@ if ! command -v nlu &> /dev/null; then
 fi
 
 echo "Now running npm-link-up...";
-nlu run --shell-version;
+nlu run --shell-version --install-main;
