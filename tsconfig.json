@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "outDir":"dist",
+    "outDir": "dist",
     "allowJs": false,
     "pretty": true,
+    "resolveJsonModule": true,
+    "sourceMap": false,
     "skipLibCheck": true,
     "declaration": true,
     "baseUrl": ".",
