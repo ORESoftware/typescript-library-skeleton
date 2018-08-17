@@ -22,8 +22,7 @@ docs
 .dockerignore
 .travis.yml
 suman.conf.js
-npm-link-up.json
-.npm-link-up.json
+.nlu.json
 
 ### matching
 *.log
