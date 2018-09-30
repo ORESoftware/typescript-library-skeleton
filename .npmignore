@@ -13,6 +13,7 @@ docs
 .tscmultiwatch
 .circleci
 .suman
+.github
 
 ### files
 .editorconfig
