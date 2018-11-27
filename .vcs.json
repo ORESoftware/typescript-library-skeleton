@@ -1,6 +1,6 @@
 {
-  "git":{
-    "master":"master",
-    "integration":"dev"
+  "git": {
+    "master": "master",
+    "integration": "dev"
   }
 }
