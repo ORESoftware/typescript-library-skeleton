@@ -1,15 +1,15 @@
 
-## TSLS - TypeScript Library Skeleton
-
-<br>
+<div align="right">
 
 Travis build status:
 [![Build Status](https://travis-ci.org/ORESoftware/typescript-library-skeleton.svg?branch=master)](https://travis-ci.org/ORESoftware/typescript-library-skeleton)
 
-<br>
-
 CircleCI build status:
 [![CircleCI](https://circleci.com/gh/ORESoftware/typescript-library-skeleton/tree/master.svg?style=svg)](https://circleci.com/gh/ORESoftware/typescript-library-skeleton/tree/master)
+
+</div>
+
+## TSLS - TypeScript Library Skeleton
 
 <br>
 
