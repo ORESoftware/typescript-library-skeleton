@@ -15,4 +15,5 @@ ENTRYPOINT ["node", "dist/main.js"]
 
 ENV FORCE_COLOR=1
 
-CMD []
+# default args go here, overridden by docker run cli
+CMD ["--default","arg"]
