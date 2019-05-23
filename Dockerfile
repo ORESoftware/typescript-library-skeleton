@@ -1,7 +1,5 @@
 FROM node:12
 
-RUN node --version
-
 USER root
 
 WORKDIR /app

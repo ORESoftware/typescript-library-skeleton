@@ -11,7 +11,8 @@
   "typings": "dist/main.d.ts",
   "scripts": {
     "test": "suman test",
-    "postinstall": "./assets/postinstall.sh"
+    "postinstall": "./assets/postinstall.sh",
+    "xyz": "./scripts/npm/xyz.sh"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,7 @@
     "skeleton",
     "scaffold"
   ],
-  "author": "TODO Yo.Mama",
+  "author": "YOUR NAME HERE",
   "license": "SEE LICENSE IN license.md",
   "bugs": {
     "url": "https://github.com/ORESoftware/typescript-library-skeleton/issues"
