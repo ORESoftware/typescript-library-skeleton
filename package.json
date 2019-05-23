@@ -2,13 +2,13 @@
   "name": "typescript-library-skeleton",
   "version": "0.0.1001",
   "description": "Semver-oriented TypeScript library skeleton.",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "bin": {
     "example": "cli/example.sh",
     "example.js": "cli/example.js"
   },
-  "types": "dist/index.d.ts",
-  "typings": "dist/index.d.ts",
+  "types": "dist/main.d.ts",
+  "typings": "dist/main.d.ts",
   "scripts": {
     "test": "suman test",
     "postinstall": "./assets/postinstall.sh"
@@ -31,6 +31,7 @@
   "homepage": "https://github.com/ORESoftware/typescript-library-skeleton#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^10.12.10"
+    "@types/node": "^10.12.10",
+    "typescript": "^3.4.5"
   }
 }

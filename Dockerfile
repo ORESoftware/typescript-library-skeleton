@@ -1,15 +1,20 @@
-FROM node:10
+FROM node:12
 
-RUN apt-get update && apt-get install -y sudo
-RUN npm set unsafe-perm true
-RUN npm install -g @oresoftware/r2g
+RUN node --version
 
-#RUN echo $(whoami)
-#RUN mkdir -p /root/repo
-#WORKDIR /root/repo
-#COPY . .
-#
-#RUN r2g run
+USER root
 
+WORKDIR /app
 
+COPY package.json .
+COPY package-lock.json .
 
+RUN npm i --production
+
+COPY . .
+
+ENTRYPOINT ["node", "dist/main.js"]
+
+ENV FORCE_COLOR=1
+
+CMD []
