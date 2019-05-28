@@ -20,3 +20,5 @@ ENV NODE_ENV ${NODE_ENV:-production}
 
 # default args go here, overridden by docker run cli
 CMD ["--default","arg"]
+
+
