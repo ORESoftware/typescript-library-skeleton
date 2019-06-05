@@ -4,6 +4,8 @@ USER root
 
 WORKDIR /app
 
+# TODO: if you have a postinstall script, you may need to copy that here too
+COPY assets assets
 COPY package.json .
 COPY package-lock.json .
 
