@@ -9,11 +9,13 @@ export const r2gSmokeTest = function () {
 
 /*
 
- bad library design:
+ TODO: bad library design:
+ 
  module.exports = 'foo';
  export = 'foo';
 
- good library design:
+ TODO: good library design:
+ 
  exports.x = 'foo'
  export const x = 'foo'
  export default = 'foo';
