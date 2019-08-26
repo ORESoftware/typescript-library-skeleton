@@ -10,9 +10,9 @@
   "types": "dist/main.d.ts",
   "typings": "dist/main.d.ts",
   "scripts": {
-    "test": "suman test",
+    "test": "echo 'npm test is currently a no-op'",
     "postinstall": "./assets/postinstall.sh",
-    "xyz": "./scripts/npm/xyz.sh"
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,6 @@
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^10.12.10",
-    "typescript": "^3.4.5"
+    "typescript": "^3.5.3"
   }
 }
