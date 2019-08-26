@@ -32,7 +32,7 @@
   "homepage": "https://github.com/ORESoftware/typescript-library-skeleton#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^10.12.10",
+    "@types/node": "^12.7.2",
     "typescript": "^3.5.3"
   }
 }
