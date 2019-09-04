@@ -5,6 +5,8 @@ set -e;
 
 cd  "$(dirname "$(dirname "$BASH_SOURCE")")"
 
+export PATH="node_modules/.bin:${PATH}"
+
 cd test
 tsc -p tsconfig.test.json
 
