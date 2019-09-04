@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
+
+# we use sh instead of bash, it's even more cross-platform
 
 set -e;
 
