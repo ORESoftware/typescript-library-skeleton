@@ -11,6 +11,17 @@ basic_path="$(cd $(dirname ${my_path}) && pwd)/$(basename ${my_path})"
 js="$basic_path/dist/cli.js"
 
 
+project_root="$(pwd)"
+
+if [[ ! -f "$HOME/.oresoftware/bin/run-tsc-if"  ]]; then
+  curl --silent -o- https://raw.githubusercontent.com/oresoftware/run-tsc-if/master/install.sh | bash || {
+   echo "Could not install run-tsc-if on your system.";
+   exit 1;
+  }
+fi
+
+"$HOME/.oresoftware/bin/run-tsc-if" "$project_root"
+
 ### there is an extradinary amount of magic required to get a bash script
 ### to properly reference an adjacent .js file
 ### if the above can be simplified, please lmk, but the above is currently very necessary.
