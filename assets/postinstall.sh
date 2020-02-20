@@ -19,7 +19,7 @@ mkdir -p "$HOME/.oresoftware/bin" || {
 
 (
   echo 'Installing run-tsc-if on your system.';
-  curl  -H 'Cache-Control: no-cache' -s -S -o- https://raw.githubusercontent.com/oresoftware/run-tsc-if/master/install.sh | bash || {
+  curl  -H 'Cache-Control: no-cache' -s -S -o- 'https://raw.githubusercontent.com/oresoftware/run-tsc-if/master/install.sh' | bash || {
      echo 'Could not install run-tsc-if on your system. That is a problem.';
      exit 1;
   }
@@ -32,7 +32,7 @@ fi
 
 if [[ ! -f "$HOME/.oresoftware/bin/realpath" ]]; then
   (
-    curl --silent -o- https://raw.githubusercontent.com/oresoftware/realpath/master/assets/install.sh | bash || {
+    curl --silent -o- 'https://raw.githubusercontent.com/oresoftware/realpath/master/assets/install.sh' | bash || {
        echo "Could not install realpath on your system.";
        exit 1;
     }
