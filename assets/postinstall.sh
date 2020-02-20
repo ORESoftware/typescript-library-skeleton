@@ -1,16 +1,16 @@
 #!/usr/bin/env sh
 
-# we use sh instead of bash, it's even more cross-platform
+# note: we must use sh instead of bash, it's more cross-platform
 
 set -e;
 
-if [ "$skip_postinstall" == "yes" ]; then
+if [[ "$skip_postinstall" == "yes" ]]; then   # TODO rename 'skip_postinstall' to something more specific
     echo "skipping postinstall routine.";
     exit 0;
 fi
 
 export FORCE_COLOR=1;
-export skip_postinstall="yes";
+export skip_postinstall="yes";   # TODO rename 'skip_postinstall' to something more specific
 
 mkdir -p "$HOME/.oresoftware/bin" || {
   echo "Could not create .oresoftware dir in user home.";
@@ -26,14 +26,19 @@ mkdir -p "$HOME/.oresoftware/bin" || {
 ) 2> /dev/null
 
 
-if [[ "$(uname -s)" == "Darwin" ]]; then
-
-   if [ ! -f "$HOME/.oresoftware/bin/realpath" ]; then
-      (
-        curl --silent -o- https://raw.githubusercontent.com/oresoftware/realpath/master/assets/install.sh | bash || {
-           echo "Could not install realpath on your system.";
-           exit 1;
-        }
-      )
-   fi
+if [[ "$(uname -s)" != "Darwin" ]]; then
+   exit 0;
 fi
+
+if [[ ! -f "$HOME/.oresoftware/bin/realpath" ]]; then
+  (
+    curl --silent -o- https://raw.githubusercontent.com/oresoftware/realpath/master/assets/install.sh | bash || {
+       echo "Could not install realpath on your system.";
+       exit 1;
+    }
+  )
+fi
+
+# the end of the postinstall script
+
+
