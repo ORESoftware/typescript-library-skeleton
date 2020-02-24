@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 # note: we must use sh instead of bash, it's more cross-platform
+# for example in Alpine linux images/containers, etc
 
 set -e;
 
