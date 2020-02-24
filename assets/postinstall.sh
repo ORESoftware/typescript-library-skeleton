@@ -4,7 +4,7 @@
 
 set -e;
 
-if [[ "$skip_postinstall" == "yes" ]]; then   # TODO rename 'skip_postinstall' to something more specific
+if [ "$skip_postinstall" = "yes" ]; then   # TODO rename 'skip_postinstall' to something more specific
     echo "skipping postinstall routine.";
     exit 0;
 fi
@@ -26,11 +26,11 @@ mkdir -p "$HOME/.oresoftware/bin" || {
 ) 2> /dev/null
 
 
-if [[ "$(uname -s)" != "Darwin" ]]; then
+if [ "$(uname -s)" != "Darwin" ]; then
    exit 0;
 fi
 
-if [[ ! -f "$HOME/.oresoftware/bin/realpath" ]]; then
+if [ ! -f "$HOME/.oresoftware/bin/realpath" ]; then
   (
     curl --silent -o- 'https://raw.githubusercontent.com/oresoftware/realpath/master/assets/install.sh' | bash || {
        echo "Could not install realpath on your system.";
