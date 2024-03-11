@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 
+set -eo pipefail;
 
-tsc --watch
+if [[ ! -f package.json ]]; then
+  echo 'wrong pwd, check your directory';
+  exit 1;
+fi
+
+tsc --watch -p tsconfig.json

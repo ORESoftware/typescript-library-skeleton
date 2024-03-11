@@ -7,6 +7,7 @@ coverage
 node_modules
 logs
 dist/*
+test/dist/*
 
 ### matching
 *.log
@@ -19,3 +20,4 @@ package-lock.json
 ### inverse
 !dist/.gitkeep
 !dist/readme.md
+!test/dist/readme.md
