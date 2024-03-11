@@ -9,6 +9,10 @@ CircleCI build status:
 
 </div>
 
+:strawberry:
+:raspberry:
+:banana:
+
 ## TSLS - TypeScript Library Skeleton
 
 <details>

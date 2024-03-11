@@ -8,17 +8,17 @@
     "sourceMap": false,
     "skipLibCheck": true,
     "rootDir": "src",
-    "declaration": true,
+    "declaration": false,
     "baseUrl": ".",
-    "target": "es2020",
+    "target": "es2022",
     "module": "commonjs",
     "noImplicitAny": true,
     "removeComments": true,
     "allowUnreachableCode": true,
     "lib": [
-      "es2018",
-      "es2019",
-      "es2020"
+      "es2021",
+      "es2022",
+      "es2023"
     ]
   },
   "compileOnSave": false,
