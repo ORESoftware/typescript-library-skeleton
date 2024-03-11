@@ -1,6 +1,6 @@
 {
   "name": "typescript-library-skeleton",
-  "version": "0.1.12",
+  "version": "0.1.123",
   "description": "Semver-oriented TypeScript library skeleton.",
   "main": "dist/main.js",
   "bin": {
@@ -32,7 +32,6 @@
   "homepage": "https://github.com/ORESoftware/typescript-library-skeleton#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^12.7.2",
-    "typescript": "^3.5.3"
+    "@types/node": "^20.11.25"
   }
 }

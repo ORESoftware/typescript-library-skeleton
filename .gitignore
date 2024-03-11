@@ -13,10 +13,6 @@ test/dist/*
 *.log
 *.tgz
 
-
-### files
-package-lock.json
-
 ### inverse
 !dist/.gitkeep
 !dist/readme.md
