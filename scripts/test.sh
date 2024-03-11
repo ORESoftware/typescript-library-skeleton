@@ -1,13 +1,9 @@
 #!/usr/bin/env bash
 
-
-set -e;
-
-cd  "$(dirname "$(dirname "$BASH_SOURCE")")"
-
+set -eo pipefail;
 export PATH="node_modules/.bin:${PATH}"
 
-cd test
+cd test && pwd
 tsc -p tsconfig.test.json
 
 for f in `(cd 'dist' && find . -type f)`; do

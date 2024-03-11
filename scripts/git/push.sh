@@ -7,5 +7,5 @@ cm="${1:-'set'}"
 
 git add .
 git add -A
-git commit --allow-empty -am "pdev:$cm"
+git commit -am "pdev:$cm"
 git push

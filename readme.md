@@ -11,14 +11,17 @@ CircleCI build status:
 
 ## TSLS - TypeScript Library Skeleton
 
-<br>
+<details>
+  <summary>Hidden Details!</summary>
+ LOL j/k
+</details>
+
 
 ####  Your Project Readme Goes Here
 
-This skeleton project is designed for Node.js libraries.
+This skeleton project is designed for TS/Node.js libraries, SDKs, and applications.
 
 <br>
-
 
 ### To do things the simple way:
 
@@ -45,22 +48,6 @@ Of course you can use Github or other hosting platforms instead of NPM to delive
 * MIT license
 * good simple default settings for .gitignore / .npmignore / .editorconfig / .gitattributes
 * Transpiling from src to dist folders (by default; you can change it manually)
-
-
-To transpile files in place, instead of tranpiling from `'src'` to `'dist'`:
-
-<br>
-update tsconfig.json  (remove the `outDir` line):
-
-```json
-"compilerOptions": {
-    "outDir": "dist"
-}
-```
-
-For small projects with just one .ts/.js file, you can just get rid of the src/lib folder, and put your main.ts
-file in the root of the project. In that case, make sure to change the `main` property in package.json from 'lib/index.js' to
-'index.js'. Same with the `typings/types` properties.
 
 
 #### Power users

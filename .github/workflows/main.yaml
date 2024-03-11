@@ -1,0 +1,55 @@
+name: Build and Deploy Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20' # Adjust to match your project's requirements
+
+      - name: Cache Node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install TypeScript globally
+        run: npm install -g typescript@5.3.3
+
+      - name: Build TypeScript
+        run: tsc -p tsconfig.json
+
+      - name: Log in to Docker registry
+        uses: docker/login-action@v1
+        with:
+          registry: xyz # Your Docker registry URL
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build Docker image using custom script
+        run: |
+          ./path/to/your-build-script.sh
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          IMAGE_NAME: xyz/<your-docker-username>/<your-image-name>:latest # Replace with your actual image name
+
+      - name: Push Docker Image
+        run: |
+          ./path/to/your-push-script.sh
